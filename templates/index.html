@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversor Cisterciense</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor Cisterciense</h1>
+
+        <h2>Gerar Número</h2>
+        <form method="POST">
+            <input type="number" name="numero" placeholder="Digite um número (1-9999)" required>
+            <br>
+            <button type="submit">Gerar</button>
+        </form>
+
+        {% if imagem_gerada %}
+            <p>Imagem Gerada:</p>
+            <img src="{{ url_for('output_file', filename=imagem_gerada) }}" width="200">
+        {% endif %}
+
+        <hr>
+
+        <h2>Carregar Imagem</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="imagem" accept="image/*" required>
+            <br>
+            <button type="submit">Ler Imagem</button>
+        </form>
+
+        {% if imagem_original %}
+            <h3>Valores Detectados:</h3>
+            <div class="grid-3colunas">
+                <div class="grid-coluna">
+                    {% for nome, quadrante, valor in coluna1 %}
+                        <div class="grid-item">
+                            <strong>{{ quadrante.capitalize() }}: {{ valor }}</strong><br>
+                            <img src="{{ url_for('output_file', filename=nome) }}" width="100">
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="imagem-central">
+                    <img src="{{ url_for('output_file', filename=imagem_original) }}" width="150">
+                </div>
+
+                <div class="grid-coluna">
+                    {% for nome, quadrante, valor in coluna2 %}
+                        <div class="grid-item">
+                            <strong>{{ quadrante.capitalize() }}: {{ valor }}</strong><br>
+                            <img src="{{ url_for('output_file', filename=nome) }}" width="100">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <strong>Total Detectado: {{ total_valor }}</strong>
+        {% endif %}
+    </div>
+</body>
+</html>

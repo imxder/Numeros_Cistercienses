@@ -1,0 +1,134 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2b7cff;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+form {
+    margin-bottom: 40px;
+}
+
+input[type="number"],
+input[type="file"] {
+    padding: 12px 15px;
+    width: 85%;
+    max-width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="file"]:focus {
+    border-color: #2b7cff;
+    background-color: #e9f0ff;
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #2b7cff;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1e5fd2;
+}
+
+button:active {
+    background-color: #155fa7;
+}
+
+img {
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-3colunas {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.grid-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.grid-item {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.grid-item img {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.imagem-central img {
+    border: 3px solid #2b7cff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+strong {
+    font-weight: 600;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
