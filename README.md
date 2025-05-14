@@ -4,7 +4,7 @@
 
 Antes de rodar o projeto, você precisa ter os seguintes itens instalados:
 
-- **Python 3.12.10
+- Python 3.12.10 ou superior.
 
 ### Como rodar o projeto
 
