@@ -33,4 +33,17 @@ Antes de rodar o projeto, você precisa ter os seguintes itens instalados:
 
 3. Execute o arquivo `app.py` para subir a API FLASK.
 
-- A aplicação estará acessível em `http://localhost:5000`. 
+- A aplicação estará acessível em `http://localhost:5000`.
+
+4. Digite o número arábico que deseja converter:
+
+   <img src="static/gerar.png" alt="Número 1234" width="450" height="200"/>
+
+5. Selecione a imagem do número cisterciense gerado em: `static/output:`
+
+   <img src="static/carregar.png" alt="Número 1234" width="450" height="200"/>
+
+
+
+
+   
